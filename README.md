@@ -202,7 +202,8 @@ La banda de baja frecuencia (0.05–0.15 Hz) se asocia principalmente con la act
 
 En la relación entre las bandas de baja y alta frecuencia LF/HF, se observan valores elevados al inicio del registro, lo cual indica un predominio simpático, posteriormente la relación disminuye reflejando un incremento en la actividad parasimpática y hacia los 200 segundos vuelve a aumentar lo que sugiere un nuevo predominio simpático. 
 En el espectrograma, vemos una mayor potencia al inicio y al final en la banda de baja frecuencia, lo que va acorte con una predominancia simpática al inicio y al final del tiempo de la muestra, sin embargo la potencia en la banda de alta frecuencia no muestra un aumento significativo en la región intermedia que sería lo esperado ya que hubo un periodo de relajación durante este tiempo.
-![Captura](https://github.com/user-attachments/assets/8e229469-bce9-4db7-981f-0eba5c515195)
+![image](https://github.com/user-attachments/assets/3b3021d0-c46d-48cf-b46c-345bb8e6731c)
+
 ```python
 fs = 1 / np.mean(np.diff(rr_times))
 coef, freqs = pywt.cwt(rr_intervals_full, np.arange(1, 128), 'morl', sampling_period=1/fs)
