@@ -1,3 +1,4 @@
+
 # Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet
 ## Descripción 
 
@@ -34,15 +35,51 @@ Para la realización de la práctica se adoptó la siguiente metodología
 
 
 
+# Captura de la señal 
+Para la captura de la señal utilizamos el módulo de electromiografia AD8232 el cual actúa como un sistema de amplifiacación y filtrado de la señal., posicionamos los electrodos activos en las derivaciones precordiales V1 y V2  enfocadas en la región septal, está es la región donde se encuentra la esctructura que separa los dos ventriculos. El electrodo tierra fue posicionado en la zona lateral del abdomen. 
+
+Posteriormente conectamos el módulo de electromiografía al sistema de adquisición de datos NI-DAQ y Con el siguiente código se estableció una frecuencia de muestreo de 250 Hz, ya que el rango de frecuencias de una señal de electrocardigorama va de 0 a 100 Hz, utilizando una frecuencia de muestreo de 250 Hz aseguramos que se cumpla teorema de Nyquist. El código también permite graficar y guardar los datos de la señal en un archivo CSV para su posterior análisis.
+
+```python
+def iniciar_adquisicion(self):
+device_name = self.puertos_combo.currentText()
+if not device_name:
+QMessageBox.warning(self, "Error", "Selecciona un dispositivo DAQ antes de iniciar la adquisición.")
+return
+
+self.archivo_tdms = "TestData.tdms"
+self.duracion = 300
+self.frecuencia_muestreo = 250
+total_muestras = self.duracion * self.frecuencia_muestreo
+
+try:
+with nidaqmx.Task() as task:
+task.ai_channels.add_ai_voltage_chan(f"{device_name}/ai0")
+task.timing.cfg_samp_clk_timing(
+self.frecuencia_muestreo,
+sample_mode=AcquisitionType.FINITE,
+samps_per_chan=total_muestras
+)
+
+task.start()
+datos = task.read(number_of_samples_per_channel=total_muestras, timeout=nidaqmx.constants.WAIT_INFINITELY)
+task.stop()
+
+self.procesar_datos(datos)
+except Exception as e:
+QMessageBox.critical(self, "Error", f"Error durante la adquisición de datos:\n{e}")
+
+```
+La captura durante 5 minutos con el módulo dió como resultado la siguente señal
+
+![sinfilro](https://github.com/user-attachments/assets/f0de424b-3005-4ebc-9ce4-9bc5b9c930c5)
+
+La cual cuenta con los siguientes parámetros
+
+![image](https://github.com/user-attachments/assets/edd46541-ab0c-416c-84ac-9bbee05a97a8)
 
 
-
-![señalcruda](https://github.com/user-attachments/assets/fe9665a3-5a3d-46b4-bc7a-c630202f08b9)
-
-
-![image](https://github.com/user-attachments/assets/d6026794-3956-409d-af7e-f84ace4d7f1c)
-
-![image](https://github.com/user-attachments/assets/d93a32b9-26e1-475a-893b-84f386aa7346)
+durante la captura buscamos estresar y relajar al voluntario en varios momentos de la prueba con el fin de analizar la variabilidad de la Frecuencia Cardíaca
 
 ## Filtro digital IIR:
 
