@@ -198,6 +198,7 @@ Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la m
 # Transformada Wavelet
 Se obtubo un espectrograma de la HRV usando la transformada wavelet continua, utilizando la función wavelet Morlet que es usada en señales fisiológicas.
 La banda de baja frecuencia (0.05–0.15 Hz) se asocia principalmente con la actividad simpática, predominante en situaciones de estrés o alerta. Por otro lado, la banda de alta frecuencia (0.15–0.3 Hz) está vinculada con la actividad parasimpática.
+
 En la relación entre las bandas de baja y alta frecuencia LF/HF, se observan valores elevados al inicio del registro, lo cual indica un predominio simpático, posteriormente la relación disminuye reflejando un incremento en la actividad parasimpática y hacia los 200 segundos vuelve a aumentar lo que sugiere un nuevo predominio simpático. 
 En el espectrograma, vemos una mayor potencia al inicio y al final en la banda de baja frecuencia, lo que va acorte con una predominancia simpática al inicio y al final del tiempo de la muestra, sin embargo la potencia en la banda de alta frecuencia no muestra un aumento significativo en la región intermedia que sería lo esperado ya que hubo un periodo de relajación durante este tiempo.
 ![Captura](https://github.com/user-attachments/assets/8e229469-bce9-4db7-981f-0eba5c515195)
