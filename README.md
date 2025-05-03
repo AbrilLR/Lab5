@@ -37,9 +37,12 @@ Para la realización de la práctica se adoptó la siguiente metodología
 
 
 
+![señalcruda](https://github.com/user-attachments/assets/fe9665a3-5a3d-46b4-bc7a-c630202f08b9)
 
 
+![image](https://github.com/user-attachments/assets/d6026794-3956-409d-af7e-f84ace4d7f1c)
 
+![image](https://github.com/user-attachments/assets/d93a32b9-26e1-475a-893b-84f386aa7346)
 
 
 
