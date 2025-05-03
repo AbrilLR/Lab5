@@ -79,7 +79,7 @@ except Exception as e:
 QMessageBox.critical(self, "Error", f"Error durante la adquisición de datos:\n{e}")
 
 ```
-La captura durante 5 minutos con el módulo dió como resultado la siguente señal
+La captura de la señal con el módulo se realizó durante 5 minutos, 20s de esta señal son mostrados a continuación
 
 ![image](https://github.com/user-attachments/assets/48112293-349a-433a-a083-fa66df2d022d)
 
