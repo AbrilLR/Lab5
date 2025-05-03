@@ -81,7 +81,8 @@ QMessageBox.critical(self, "Error", f"Error durante la adquisición de datos:\n{
 ```
 La captura durante 5 minutos con el módulo dió como resultado la siguente señal
 
-![sinfilro](https://github.com/user-attachments/assets/f0de424b-3005-4ebc-9ce4-9bc5b9c930c5)
+![image](https://github.com/user-attachments/assets/48112293-349a-433a-a083-fa66df2d022d)
+
 
 La cual cuenta con los siguientes parámetros
 
