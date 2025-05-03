@@ -8,6 +8,12 @@ Mientras mayor se el nivel de variabilidad de la frecuencia cardica se puede dec
 
  Por el contrario, una HRV reducida se ha relacionado con estrés, fatiga y diversas patologías, como la hipertensión y la insuficiencia cardíaca. 
 
+La HRV cuenta con ciertos parámetros que permiten su estudio 
+
+* SDNN: Es la desviación estándar de todos los intervalos R-R. Representa la variabilidad de la frecuencia cardíaca (HRV) considerando tanto fluctuaciones a corto como a largo plazo. Se da en milisegundos
+* rMSSD Corresponde a la raíz cuadrada de la media de las diferencias cuadráticas entre intervalos R-R consecutivos. Es un indicador sensible de la actividad parasimpática y del control vagal sobre el corazón. Se da en milisegundos.
+
+
 La Transformada Wavelet, es una herramienta que permite identificar cambios en frecuencias características y analiza la dinámica temporal de la señal cardíaca, es eficiente para el análisis local de señales no estacionarias y de rápida transitoriedad. 
 
 Esta transformada cuenta con dos parámetros indispensables en el análisis, el desplazamiento y el escalamiento. El desplazamiento se refiere a que se recorre la señal de adelante hacia atrás en el tiempo. Mientras que en el escalamiento se alarga y comprime la Wavelet. La señal resultante depende de la Wavelet madre y de los parámetros anteriormente mencionados. 
