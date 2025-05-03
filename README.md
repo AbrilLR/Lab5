@@ -47,7 +47,7 @@ Para la realización de la práctica se adoptó la siguiente metodología
 # Captura de la señal 
 Para la captura de la señal utilizamos el módulo de electrocardiografia AD8232 el cual actúa como un sistema de amplifiacación y filtrado de la señal, posicionamos los electrodos activos en las derivaciones precordiales V1 y V2  enfocadas en la región septal, está es la región donde se encuentra la esctructura que separa los dos ventriculos. El electrodo tierra fue posicionado en la zona lateral del abdomen. 
 
-Posteriormente conectamos el módulo de electromiografía al sistema de adquisición de datos NI-DAQ y Con el siguiente código se estableció una frecuencia de muestreo de 250 Hz, ya que el rango de frecuencias de una señal de electrocardigorama va de 0 a 100 Hz, utilizando una frecuencia de muestreo de 250 Hz aseguramos que se cumpla teorema de Nyquist. El código también permite graficar y guardar los datos de la señal en un archivo CSV para su posterior análisis.
+Posteriormente conectamos el módulo de electrocardiograma al sistema de adquisición de datos NI-DAQ y Con el siguiente código se estableció una frecuencia de muestreo de 250 Hz, ya que el rango de frecuencias de una señal de electrocardigorama va de 0 a 100 Hz, utilizando una frecuencia de muestreo de 250 Hz aseguramos que se cumpla teorema de Nyquist. El código también permite graficar y guardar los datos de la señal en un archivo CSV para su posterior análisis.
 
 ```python
 def iniciar_adquisicion(self):
@@ -102,13 +102,16 @@ Estos parámetros se eligen teniendo en cuenta los rangos de frecuencia util par
 Ωu=1538,84 rad/muestra
 Ω2=2621,09 rad/muestra
 luego de esto se calcula el orden del filtro, obtniendo el valor absoluto de A y B a partir de la transformación de filtro paso bajo a pasa banda, y utilizando la frecuencia menor para despejar el orden del filtro (n)
+
 ![image](https://github.com/user-attachments/assets/db75a9af-9ec6-41d3-9eaf-d66c41330875)
 
 se obtiene como resultado un filtro de orden 3. El tipo de filtro es Butterworth debido a que su atenuación de -3dB se encuentra en la frecuencia de corte para el filtro pasa alto y pasa bajo, lo que garantiza una transición suave entre la banda pasante y la banda de atenuación (sin ondulaciones) , además que es un filtro muy común disponible en prácticamente cualquier herramienta de procesamiento. 
 
 luego de esto se toma la función de transferencia para un filtro de tercer orden y se reemplaza s con la expresión correspondiente a transformación correspondiente de filtro paso bajo a pasa banda, obteniendo la siguiente expresión para la función de transferencia:
+
 ![image](https://github.com/user-attachments/assets/33ffc665-2886-40de-bbda-5816e044ff1f)
 y reemplazando ΩL y Ωu obtenemos:
+
 ![image](https://github.com/user-attachments/assets/a902c330-2d51-4527-8c65-ce380097df8d)
 
 Luego de obtener la función de transferencia se aplica una transformación bilineal para pasar del dominio s al dominio z(dominio digital), aplicando la siguiente formula con w=s
