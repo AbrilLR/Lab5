@@ -200,7 +200,7 @@ El valor obtenido para RMSSD fue de 90.24 ms, una cifra considerablemente alta q
 
 En cuanto al SDNN, se obtuvo un valor de 98.99 ms, el cual representa la desviación estándar de todos los intervalos R–R durante el periodo de análisis. Este indicador proporciona una visión global de la variabilidad del ritmo cardíaco, incorporando tanto componentes simpáticos como parasimpáticos del sistema nervioso autónomo. Un valor como el registrado, cercano a los 100 ms refleja una buena adaptación del sistema cardiovascular. 
 # Transformada Wavelet
-Se obtubo un espectrograma de la HRV usando la transformada wavelet continua, utilizando la función wavelet Morlet que es usada en señales fisiológicas.
+Se obtuvo un espectrograma de la HRV usando la transformada wavelet continua, utilizando la función wavelet Morlet que es usada en señales fisiológicas.
 La banda de baja frecuencia (0.05–0.15 Hz) se asocia principalmente con la actividad simpática predominante en situaciones de estrés o alerta, por otro lado la banda de alta frecuencia (0.15–0.3 Hz) está vinculada con la actividad parasimpática.
 
 En la relación entre las bandas de baja y alta frecuencia LF/HF, se observan valores elevados al inicio del registro, lo cual indica un predominio simpático, posteriormente la relación disminuye reflejando un incremento en la actividad parasimpática y hacia los 200 segundos vuelve a aumentar lo que sugiere un nuevo predominio simpático. 
