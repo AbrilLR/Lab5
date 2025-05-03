@@ -196,6 +196,9 @@ Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la m
 ![image](https://github.com/user-attachments/assets/8cbe9010-0618-417a-9b0b-16816e729147)
 ![image](https://github.com/user-attachments/assets/b3a9171f-f08f-426c-b17b-2b22c631e3d9)
 
+El valor obtenido para RMSSD fue de 90.24 ms, una cifra considerablemente alta que refleja una alta variabilidad entre latidos consecutivos. Este parámetro está relacionado con la actividad del sistema nervioso parasimpático, que regula funciones de descanso y recuperación. Valores altos, como el observado, indican un buen control vagal, sugiriendo un estado de relajación, adecuada recuperación fisiológica y bajo nivel de estrés. 
+
+En cuanto al SDNN, se obtuvo un valor de 98.99 ms, el cual representa la desviación estándar de todos los intervalos R–R durante el periodo de análisis. Este indicador proporciona una visión global de la variabilidad del ritmo cardíaco, incorporando tanto componentes simpáticos como parasimpáticos del sistema nervioso autónomo. Un valor como el registrado, cercano a los 100 ms refleja una buena adaptación del sistema cardiovascular. 
 # Transformada Wavelet
 Se obtubo un espectrograma de la HRV usando la transformada wavelet continua, utilizando la función wavelet Morlet que es usada en señales fisiológicas.
 La banda de baja frecuencia (0.05–0.15 Hz) se asocia principalmente con la actividad simpática predominante en situaciones de estrés o alerta, por otro lado la banda de alta frecuencia (0.15–0.3 Hz) está vinculada con la actividad parasimpática.
