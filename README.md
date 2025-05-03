@@ -45,7 +45,7 @@ Para la realización de la práctica se adoptó la siguiente metodología
 
 
 # Captura de la señal 
-Para la captura de la señal utilizamos el módulo de electromiografia AD8232 el cual actúa como un sistema de amplifiacación y filtrado de la señal., posicionamos los electrodos activos en las derivaciones precordiales V1 y V2  enfocadas en la región septal, está es la región donde se encuentra la esctructura que separa los dos ventriculos. El electrodo tierra fue posicionado en la zona lateral del abdomen. 
+Para la captura de la señal utilizamos el módulo de electrocardiografia AD8232 el cual actúa como un sistema de amplifiacación y filtrado de la señal, posicionamos los electrodos activos en las derivaciones precordiales V1 y V2  enfocadas en la región septal, está es la región donde se encuentra la esctructura que separa los dos ventriculos. El electrodo tierra fue posicionado en la zona lateral del abdomen. 
 
 Posteriormente conectamos el módulo de electromiografía al sistema de adquisición de datos NI-DAQ y Con el siguiente código se estableció una frecuencia de muestreo de 250 Hz, ya que el rango de frecuencias de una señal de electrocardigorama va de 0 a 100 Hz, utilizando una frecuencia de muestreo de 250 Hz aseguramos que se cumpla teorema de Nyquist. El código también permite graficar y guardar los datos de la señal en un archivo CSV para su posterior análisis.
 
