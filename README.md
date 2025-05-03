@@ -195,12 +195,10 @@ Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la m
 ```python
 
 ```
-
-
-
-
-
-
+# Transformada Wavelet
+Se obtubo un espectrograma de la HRV usando la transformada wavelet continua, utilizando la función wavelet Morlet que es usada en señales fisiológicas.
+También se obtuvo LF/HF, que es la relación entre las bandas de baja y alta frecuencia, la banda de baja frecuencia (0,04-0,15 Hz) está relacionada con el sistema nervioso simpático, activo en situaciones de estrés; mientras que la banda de alta frecuencia (0,15-0,4 Hz) se relaciona con el sistema nervioso parasímpatico, activo en estados de relajación.
+Podemos observar en la relación LF/HF valores altos iniciales, que luego disminuyen y vuelven a aumentar luego de los 200s, indicando inicialmente predominancia de la activad simpática, luego de la actividad parasimpática y por ultimo de la simpática otra vez, esto tambien lo podemos observar en el espectrograma donde vemos una mayor potencia al inicio y al final en la banda de baja frecuencia.
 
 
 
