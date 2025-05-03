@@ -189,10 +189,9 @@ como podemos observar los coeficientes impresos corresponden a los coeficientes 
 ![image](https://github.com/user-attachments/assets/c91660bc-0a57-4d7c-ad47-5a95a2140471)
 
 # HRV en el dominio del tiempo:
-Luego de filtrada la señal de ECG, calculamos los intervalos R-R para obtener una nueva señal que contiene el HRV, que es la variabilidad de la frecuencia cardiaca, es decir la variación de tiempo entre cada R-R.
-Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la media, desviacion estandar, entre otros.
+Luego de filtrada la señal de ECG, calculamos los intervalos R-R para obtener una nueva señal que contiene la variabilidad de la frecuencia cardiaca, es decir, la variación de tiempo entre cada R-R.
+Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la media, y desviacion estandar.
 ![Captura2](https://github.com/user-attachments/assets/aa68267e-dd83-418d-ada0-a3d1a1108429)
-
 ```python
 
 ```
@@ -202,6 +201,25 @@ La banda de baja frecuencia (0.05–0.15 Hz) se asocia principalmente con la act
 En la relación entre las bandas de baja y alta frecuencia LF/HF, se observan valores elevados al inicio del registro, lo cual indica un predominio simpático, posteriormente la relación disminuye reflejando un incremento en la actividad parasimpática y hacia los 200 segundos vuelve a aumentar lo que sugiere un nuevo predominio simpático. 
 En el espectrograma, vemos una mayor potencia al inicio y al final en la banda de baja frecuencia, lo que va acorte con una predominancia simpática al inicio y al final del tiempo de la muestra, sin embargo la potencia en la banda de alta frecuencia no muestra un aumento significativo en la región intermedia que sería lo esperado ya que hubo un periodo de relajación durante este tiempo.
 ![Captura](https://github.com/user-attachments/assets/8e229469-bce9-4db7-981f-0eba5c515195)
+```python
+fs = 1 / np.mean(np.diff(rr_times))
+coef, freqs = pywt.cwt(rr_intervals_full, np.arange(1, 128), 'morl', sampling_period=1/fs)
+power = np.abs(coef)**2
+
+freqs, power = freqs[freqs <= 0.5], power[freqs <= 0.5]
+lf = (freqs >= 0.04) & (freqs < 0.15)
+hf = (freqs >= 0.15) & (freqs <= 0.4)
+lf_hf = np.sum(power[lf], axis=0) / np.sum(power[hf], axis=0)
+
+fig, axs = plt.subplots(2, 1, figsize=(12, 6), sharex=True)
+axs[0].imshow(power, extent=[rr_times[0], rr_times[-1], freqs[0], freqs[-1]], cmap='jet', aspect='auto', origin='lower')
+axs[0].set_ylabel("Frecuencia (Hz)")
+axs[1].plot(rr_times, lf_hf, color='darkred')
+axs[1].set_xlabel("Tiempo (s)")
+axs[1].set_ylabel("LF/HF")
+plt.tight_layout()
+plt.show()
+```
 
 ### Requisitos 
 * Pyton 3.9.0 ó superior
