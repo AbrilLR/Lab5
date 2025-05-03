@@ -186,8 +186,9 @@ print("Coeficientes del numerador (b):", b)
 print("Coeficientes del denominador (a):", a)
 ```
 ![image](https://github.com/user-attachments/assets/f0332b36-f56a-4056-9c7a-ac11a643b99a)
-como podemos observar los coeficientes impresos corresponden a los coeficientes calculados luego de la transformación bilineal en el filtro, por lo que el dieseño del filtro se puede considerar exitoso y concordante con lo planteado. Una vez verificado el filtro, se gráfica tanto la señal ecg original como la filtrada, obteniendo las siguientes gráficas:
-![image](https://github.com/user-attachments/assets/c91660bc-0a57-4d7c-ad47-5a95a2140471)
+como podemos observar los coeficientes impresos corresponden a los coeficientes calculados luego de la transformación bilineal en el filtro, por lo que el dieseño del filtro se puede considerar exitoso y concordante con lo planteado. 20 segundos de la señal filtrada se ven a continuación
+![image](https://github.com/user-attachments/assets/c7d7204e-06b4-415b-8b5b-aaacd465c521)
+
 
 # HRV en el dominio del tiempo:
 Luego de filtrada la señal de ECG, con ayuda de la función scipy.signal.find_peaks calculamos los intervalos R-R para obtener una nueva señal que contiene la variabilidad de la frecuencia cardiaca, es decir, la variación de tiempo entre cada R-R.
