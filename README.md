@@ -185,7 +185,13 @@ print("Coeficientes del denominador (a):", a)
 como podemos observar los coeficientes impresos corresponden a los coeficientes calculados luego de la transformación bilineal en el filtro, por lo que el dieseño del filtro se puede considerar exitoso y concordante con lo planteado. Una vez verificado el filtro, se gráfica tanto la señal ecg original como la filtrada, obteniendo las siguientes gráficas:
 ![image](https://github.com/user-attachments/assets/c91660bc-0a57-4d7c-ad47-5a95a2140471)
 
+# HRV en el dominio del tiempo:
+Luego de filtrada la señal de ECG, calculamos los intervalos R-R para obtener una nueva señal que contiene el HRV, que es la variabilidad de la frecuencia cardiaca, es decir la variación de tiempo entre cada R-R.
+Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la media, desviacion estandar, entre otros.
 
+```python
+
+```
 
 
 
