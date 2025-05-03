@@ -2,7 +2,7 @@
 # Variabilidad de la Frecuencia Cardiaca usando la Transformada Wavelet
 
 ## Aviso 
-Los datos utilizados en este proyecto son de mi autoría y han sido obtenidos a partir de mediciones personales. Se autoriza su uso y distribución exclusivamente para fines de investigación, educación y desarrollo de proyectos relacionados con el procesamiento de señales electromiográficas, siempre que se cite adecuadamente la fuente y se respete la integridad de la información. El uso con fines comerciales queda sujeto a mi autorización previa.
+Los datos utilizados en este proyecto son de mi autoría y han sido obtenidos a partir de mediciones personales. Se autoriza su uso y distribución exclusivamente para fines de investigación, educación y desarrollo de proyectos relacionados con el procesamiento de señales electocardiograma, siempre que se cite adecuadamente la fuente y se respete la integridad de la información. El uso con fines comerciales queda sujeto a mi autorización previa.
 ## Descripción 
 
 En esta práctica de laboratorio, se busca estudiar la Variabilidad de la Frecuencia Cardíaca (HRV), la HRV es un marcador clave para evaluar la como se regula el sistema nervioso autónomo SNA actuando en el corazón. La HRV refleja las fluctuaciones temporales entre los intervalos R-R del electrocardiograma, permitiendo evaluar el equilibrio entre la parte simpática la cuál es responsable de acelerar las respuestas fisiológicas (como el aumento de la frecuencia cardíaca), y la rama parasimpática, encargada de promover estados de relajación. 
