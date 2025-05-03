@@ -193,7 +193,7 @@ como podemos observar los coeficientes impresos corresponden a los coeficientes 
 # HRV en el dominio del tiempo:
 Luego de filtrada la señal de ECG, con ayuda de la función scipy.signal.find_peaks calculamos los intervalos R-R para obtener una nueva señal que contiene la variabilidad de la frecuencia cardiaca, es decir, la variación de tiempo entre cada R-R.
 Posteriormente se analiza en el dominio del tiempo, obteniendo valores como la media, y desviacion estandar.
-![Captura2](https://github.com/user-attachments/assets/aa68267e-dd83-418d-ada0-a3d1a1108429)
+![image](https://github.com/user-attachments/assets/8cbe9010-0618-417a-9b0b-16816e729147)
 ![image](https://github.com/user-attachments/assets/b3a9171f-f08f-426c-b17b-2b22c631e3d9)
 
 # Transformada Wavelet
